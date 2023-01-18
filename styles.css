@@ -1,5 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+input {
+  width: 100%;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  border: none;
+  padding: 0.5rem;
+  width: 3rem;
+  background-color: whitesmoke;
+  color: blueviolet;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  border-radius: 1.5rem;
 }/*# sourceMappingURL=styles.css.map */
