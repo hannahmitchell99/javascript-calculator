@@ -5,7 +5,28 @@
   box-sizing: border-box;
 }
 
-input {
+body {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.calculator-buttons {
+  height: 70%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.display {
   width: 100%;
   font-size: 1.5rem;
   font-family: "Poppins", sans-serif;

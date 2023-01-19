@@ -10,35 +10,38 @@
 </head>
 
 <body>
-    <output>Output</output>
-    <section class="display">
-        <input type=text placeholder="enter a value">
-    </section>
-    <section class="numbers">
-        <button class="numbers__0">0</button>
-        <button class="numbers__1">1</button>
-        <button class="numbers__2">2</button>
-        <button class="numbers__3">3</button>
-        <button class="numbers__4">4</button>
-        <button class="numbers__5">5</button>
-        <button class="numbers__6">6</button>
-        <button class="numbers__7">7</button>
-        <button class="numbers__8">8</button>
-        <button class="numbers__9">9</button>
-    </section>
-    <section class="operators">
-        <button class="operators__add">+</button>
-        <button class="operators__minus">-</button>
-        <button class="operators__multiply">x</button>
-        <button class="operators__divide">÷</button>
-    </section>
-    <section class="commands">
-        <button class="commands__equal">=</button>
-        <button class="commands__delete">del</button>
-        <button class="commands__clear">mc</button>
-        <button class="commands__cancel">c</button>
-        <button class="commands__float">.</button>
-    </section>
+    <div class="calculator">
+        <h1 id ="display"></h1>
+        <div class="calculator-buttons">
+
+            <button class="numbers">0</button>
+            <button class="numbers">1</button>
+            <button class="numbers">2</button>
+            <button class="numbers">3</button>
+            <button class="numbers">4</button>
+            <button class="numbers">5</button>
+            <button class="numbers">6</button>
+            <button class="numbers">7</button>
+            <button class="numbers">8</button>
+            <button class="numbers">9</button>
+
+
+            <button class = "operators" id="plus">+</button>
+            <button class = "operators" id="minus">-</button>
+            <button class = "operators" id="multiply">x</button>
+            <button class = "operators" id="divide">÷</button>
+
+
+            <button id="equal">=</button>
+            <button id="delete">del</button>
+            <button id="clear">mc</button>
+            <button id="float">.</button>
+
+        </div>
+
+    </div>
+    <script src="/main.js"></script>
 </body>
+
 
 </html>
