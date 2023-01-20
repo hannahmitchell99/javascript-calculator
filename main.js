@@ -24,7 +24,7 @@ operatorValue = " ";
 
 //Declaring Functions
 
-// when buttons are clicked
+// Functions for when buttons are clicked
 
 const whenClicked = (event) => {
   if (displayValue == "0") {
@@ -35,34 +35,6 @@ const whenClicked = (event) => {
     displayValue = display.innerText;
   }
 };
-
-// function to create array of values and to determine operator chosen
-
-const ifEqualsClicked = () => {
-  if (displayValue.includes("+")) {
-    valueArray = displayValue.split("+");
-    operatorValue = "+";
-  } else if (displayValue.includes("-")) {
-    valueArray = displayValue.split("-");
-    operatorValue = "-";
-  } else if (displayValue.includes("x")) {
-    valueArray = displayValue.split("x");
-    operatorValue = "x";
-  } else if (displayValue.includes("÷")) {
-    valueArray = displayValue.split("÷");
-    operatorValue = "/";
-  } 
-  return valueArray;
-};
-
-// checking the arrays and displays are returning correctly
-
-const equalClick = () => {
-  console.log(displayValue);
-  console.log(valueArray);
-  console.log(operatorValue);
-};
-
 // clearing the display
 
 const clearClicked = () => {
@@ -74,6 +46,36 @@ const clearClicked = () => {
 
 const deleteClicked = () => {
   display.innerText = display.innerText.slice(0, -1);
+};
+
+// Functions that work with the clicked buttons to give an output
+
+// function to create array of values and to determine operator chosen
+
+const ifEqualsClicked = () => {
+  if (displayValue.includes("+")) {
+    myArray = displayValue.split("+");
+    operatorValue = "+";
+  } else if (displayValue.includes("-")) {
+    myArray = displayValue.split("-");
+    operatorValue = "-";
+  } else if (displayValue.includes("x")) {
+    myArray = displayValue.split("x");
+    operatorValue = "x";
+  } else if (displayValue.includes("÷")) {
+    myArray = displayValue.split("÷");
+    operatorValue = "/";
+  }
+  return valueArray = myArray.map((item) => +item) // converting to integers
+};
+
+
+// checking the arrays and displays are returning correctly
+
+const equalClick = () => {
+  console.log(displayValue);
+  console.log(valueArray);
+  console.log(operatorValue);
 };
 
 //Calling Functions
