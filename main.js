@@ -66,13 +66,27 @@ const ifEqualsClicked = () => {
     myArray = displayValue.split("÷");
     operatorValue = "/";
   }
-  return valueArray = myArray.map((item) => +item) // converting to integers
+  return (valueArray = myArray.map((item) => parseFloat(item))); // converting to floats
 };
 
+// calculating
+
+const calculatedResult = () => {
+  if (operatorValue == "+") {
+    display.innerText = valueArray[0] + valueArray[1];
+  } else if (operatorValue == "-") {
+    display.innerText = valueArray[0] - valueArray[1];
+  } else if (operatorValue == "x") {
+    display.innerText = valueArray[0] * valueArray[1];
+  } else if (operatorValue == "/") {
+    display.innerText = valueArray[0] / valueArray[1];
+  }
+};
 
 // checking the arrays and displays are returning correctly
 
 const equalClick = () => {
+  calculatedResult();
   console.log(displayValue);
   console.log(valueArray);
   console.log(operatorValue);
