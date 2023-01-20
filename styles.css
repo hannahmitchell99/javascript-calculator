@@ -26,7 +26,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
-.display {
+#display {
   width: 100%;
   font-size: 1.5rem;
   font-family: "Poppins", sans-serif;
