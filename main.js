@@ -19,26 +19,58 @@ const float = document.querySelector("#float");
 
 let displayValue = "0";
 const clearedValue = "0";
+valueArray = [];
+operatorValue = " ";
 
 //Declaring Functions
 
+// when buttons are clicked
+
 const whenClicked = (event) => {
-    if (displayValue=="0"){
-        display.innerText = event.target.innerText;
-        displayValue = display.innerText;
-    } else{
-        display.innerText += event.target.innerText;
-        displayValue = display.innerText;
-    }
+  if (displayValue == "0") {
+    display.innerText = event.target.innerText;
+    displayValue = display.innerText;
+  } else {
+    display.innerText += event.target.innerText;
+    displayValue = display.innerText;
+  }
 };
 
-// const ifEqualsClicked = () =>{
-//     const myArray = displayValue
-// }
+// function to create array of values and to determine operator chosen
+
+const ifEqualsClicked = () => {
+  if (displayValue.includes("+")) {
+    valueArray = displayValue.split("+");
+    operatorValue = "+";
+  } else if (displayValue.includes("-")) {
+    valueArray = displayValue.split("-");
+    operatorValue = "-";
+  } else if (displayValue.includes("x")) {
+    valueArray = displayValue.split("x");
+    operatorValue = "x";
+  } else if (displayValue.includes("÷")) {
+    valueArray = displayValue.split("÷");
+    operatorValue = "/";
+  } 
+  return valueArray;
+};
+
+// checking the arrays and displays are returning correctly
+
+const equalClick = () => {
+  console.log(displayValue);
+  console.log(valueArray);
+  console.log(operatorValue);
+};
+
+// clearing the display
 
 const clearClicked = () => {
   display.innerText = clearedValue;
+  displayValue = "0";
 };
+
+// deleting last operator
 
 const deleteClicked = () => {
   display.innerText = display.innerText.slice(0, -1);
@@ -61,9 +93,6 @@ clear.addEventListener("click", clearClicked);
 
 deleteItem.addEventListener("click", deleteClicked);
 
-equal.addEventListener("click",()=>{
-    console.log(displayValue);
-})
+equal.addEventListener("click", ifEqualsClicked);
 
-
-
+equal.addEventListener("click", equalClick);
