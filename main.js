@@ -53,43 +53,62 @@ const deleteClicked = () => {
 // function to create array of values and to determine operator chosen
 
 const ifEqualsClicked = () => {
-  if (displayValue.includes("+")) {
-    myArray = displayValue.split("+");
-    operatorValue = "+";
-  } else if (displayValue.includes("-")) {
-    myArray = displayValue.split("-");
-    operatorValue = "-";
-  } else if (displayValue.includes("x")) {
-    myArray = displayValue.split("x");
-    operatorValue = "x";
-  } else if (displayValue.includes("÷")) {
-    myArray = displayValue.split("÷");
-    operatorValue = "/";
+  // creating an array with just numbers (strings at this point)
+  let numbers = displayValue.split(/\+|\-|\x|\÷/g);
+
+  // creating an array of operators
+  // done by replacing the numbers and fullstops with an empty string, then we split it.
+
+  let operators = displayValue.replace(/[0-9]|\./g, "").split("");
+
+  // now, we loop through the array, and perform one operation at a time.
+  // divide first, then multiply, then add, then subtract.
+  // each time we are moving through the array, we are alternating between the numbers and the operators array.
+  // final element in the array will be the output.
+
+
+  let divide = operators.indexOf("÷"); // finding where in the operators array divide is located
+  while (divide != -1) {
+    // while the array item is not last
+    numbers.splice(divide, 2, numbers[divide] / numbers[divide + 1]);
+    operators.splice(divide, 1);
+    divide = operators.indexOf("÷");
   }
-  return (valueArray = myArray.map((item) => parseFloat(item))); // converting to floats
+
+  let multiply = operators.indexOf("x");
+  while (multiply != -1) {
+    numbers.splice(multiply, 2, numbers[multiply] * numbers[multiply + 1]);
+    operators.splice(multiply, 1);
+    multiply = operators.indexOf("x");
+  }
+
+  let subtract = operators.indexOf("-");
+  while (subtract != -1) {
+    numbers.splice(subtract, 2, numbers[subtract] - numbers[subtract + 1]);
+    operators.splice(subtract, 1);
+    subtract = operators.indexOf("-");
+  }
+
+  let add = operators.indexOf("+");
+  while (add != -1) {
+    numbers.splice(
+      add,
+      2,
+      parseFloat(numbers[add]) + parseFloat(numbers[add + 1])
+    ); // parsefoloat to prevent string concatenation
+    operators.splice(add, 1);
+    add = operators.indexOf("+");
+  }
+  
+  return display.innerText = numbers;
+  
 };
 
-// calculating
-
-const calculatedResult = () => {
-  if (operatorValue == "+") {
-    display.innerText = valueArray[0] + valueArray[1];
-  } else if (operatorValue == "-") {
-    display.innerText = valueArray[0] - valueArray[1];
-  } else if (operatorValue == "x") {
-    display.innerText = valueArray[0] * valueArray[1];
-  } else if (operatorValue == "/") {
-    display.innerText = valueArray[0] / valueArray[1];
-  }
-};
 
 // checking the arrays and displays are returning correctly
 
 const equalClick = () => {
-  calculatedResult();
   console.log(displayValue);
-  console.log(valueArray);
-  console.log(operatorValue);
 };
 
 //Calling Functions
