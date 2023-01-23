@@ -12,16 +12,6 @@ body {
   align-items: center;
 }
 
-#display {
-  width: 75%;
-  font-size: 2.5rem;
-  font-family: "Poppins", sans-serif;
-  color: rgb(185, 137, 229);
-  background-color: rgb(246, 233, 246);
-  border-radius: 1rem;
-  word-wrap: break-word;
-}
-
 .calculator {
   display: flex;
   flex-direction: column;
@@ -29,6 +19,15 @@ body {
   justify-content: center;
   height: 100%;
   width: 80%;
+}
+.calculator #display {
+  width: 75%;
+  font-size: 2.5rem;
+  font-family: "Poppins", sans-serif;
+  color: rgb(185, 137, 229);
+  background-color: rgb(246, 233, 246);
+  border-radius: 1rem;
+  word-wrap: break-word;
 }
 
 .calculator-buttons {
@@ -39,8 +38,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 4px;
 }
-
-button {
+.calculator-buttons button {
   border: none;
   padding: 0.5rem;
   background-color: rgb(185, 137, 229);
@@ -60,15 +58,24 @@ button {
   color: blueviolet;
 }
 
-#delete, #clear {
+#delete,
+#clear {
   background-color: deeppink;
 }
 
 @media screen and (max-width: 380px) {
-  #display {
+  .calculator #display {
     font-size: 1.5rem;
   }
-  button {
+  .calculator-buttons button {
     font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .calculator #display {
+    font-size: 3rem;
+  }
+  .calculator-buttons button {
+    font-size: 2.5rem;
   }
 }/*# sourceMappingURL=styles.css.map */
