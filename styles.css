@@ -62,4 +62,13 @@ button {
 
 #delete, #clear {
   background-color: deeppink;
+}
+
+@media screen and (max-width: 380px) {
+  #display {
+    font-size: 1.5rem;
+  }
+  button {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
