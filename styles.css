@@ -19,6 +19,7 @@ body {
   color: rgb(185, 137, 229);
   background-color: rgb(246, 233, 246);
   border-radius: 1rem;
+  word-wrap: break-word;
 }
 
 .calculator {

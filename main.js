@@ -31,8 +31,8 @@ const whenClicked = (event) => {
 // clearing the display
 
 const clearClicked = () => {
-  display.innerText = clearedValue;
   displayValue = "0";
+  return display.innerText = clearedValue;
 };
 
 // deleting last operator
@@ -41,7 +41,8 @@ const deleteClicked = () => {
   if (display.innerText.length > 1){
     return display.innerText = display.innerText.slice(0, -1);
   } else{
-    return display.innerText = "0";
+    displayValue = "0"
+    return display.innerText = displayValue;
 
   }
   
