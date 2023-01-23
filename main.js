@@ -5,11 +5,6 @@ const display = document.querySelector("#display");
 const numberButtons = document.querySelectorAll(".numbers");
 const operatorButtons = document.querySelectorAll(".operators");
 
-const addition = document.querySelector("#plus");
-const subtract = document.querySelector("#minus");
-const multiply = document.querySelector("#multiply");
-const divide = document.querySelector("#divide");
-
 const clear = document.querySelector("#clear");
 const deleteItem = document.querySelector("#delete");
 const equal = document.querySelector("#equal");
@@ -19,8 +14,6 @@ const float = document.querySelector("#float");
 
 let displayValue = "0";
 const clearedValue = "0";
-valueArray = [];
-operatorValue = " ";
 
 //Declaring Functions
 
@@ -99,8 +92,13 @@ const ifEqualsClicked = () => {
     operators.splice(add, 1);
     add = operators.indexOf("+");
   }
-  
-  return display.innerText = numbers;
+  if (numbers.includes(NaN)){
+    display.innerText = "ERROR"
+    displayValue = "0";
+  } else {
+    displayValue = numbers;
+    return display.innerText = numbers; 
+  }
   
 };
 
