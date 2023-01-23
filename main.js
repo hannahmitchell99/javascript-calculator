@@ -38,7 +38,13 @@ const clearClicked = () => {
 // deleting last operator
 
 const deleteClicked = () => {
-  display.innerText = display.innerText.slice(0, -1);
+  if (display.innerText.length > 1){
+    return display.innerText = display.innerText.slice(0, -1);
+  } else{
+    return display.innerText = "0";
+
+  }
+  
 };
 
 // Functions that work with the clicked buttons to give an output
