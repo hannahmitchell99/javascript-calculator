@@ -12,33 +12,53 @@ body {
   align-items: center;
 }
 
+#display {
+  width: 75%;
+  font-size: 2.5rem;
+  font-family: "Poppins", sans-serif;
+  color: rgb(185, 137, 229);
+  background-color: rgb(246, 233, 246);
+  border-radius: 1rem;
+}
+
 .calculator {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
+  width: 80%;
 }
 
 .calculator-buttons {
   height: 70%;
+  width: 75%;
+  padding: 2px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-}
-
-#display {
-  width: 100%;
-  font-size: 1.5rem;
-  font-family: "Poppins", sans-serif;
+  grid-gap: 4px;
 }
 
 button {
   border: none;
   padding: 0.5rem;
-  width: 3rem;
-  background-color: whitesmoke;
-  color: blueviolet;
-  font-size: 1rem;
+  background-color: rgb(185, 137, 229);
+  color: white;
+  font-size: 2rem;
   font-family: "Poppins", sans-serif;
-  border-radius: 1.5rem;
+  border-radius: 1rem;
+}
+
+.operators {
+  background-color: hotpink;
+}
+
+#equal {
+  grid-column: span 3;
+  background-color: rgb(234, 215, 250);
+  color: blueviolet;
+}
+
+#delete, #clear {
+  background-color: deeppink;
 }/*# sourceMappingURL=styles.css.map */
