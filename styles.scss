@@ -1,97 +1,10 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
 
 $font-main: "Poppins", sans-serif;
 $button-main-colour: rgb(185, 137, 229);
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-body {
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+@import "./partials/layout";
+@import "./partials/mediaqueries";
+@import "./partials/styling";
 
-.calculator {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 80%;
-
-  #display {
-    width: 75%;
-    font-size: 2.5rem;
-    font-family: $font-main;
-    color: $button-main-colour;
-    background-color: rgb(246, 233, 246);
-    border-radius: 1rem;
-    word-wrap: break-word;
-  }
-}
-
-.calculator-buttons {
-  height: 70%;
-  width: 75%;
-  padding: 2px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 4px;
-
-  button {
-    border: none;
-    padding: 0.5rem;
-    background-color: $button-main-colour;
-    color: white;
-    font-size: 2rem;
-    font-family: $font-main;
-    border-radius: 1rem;
-  }
-}
-
-.operators {
-  background-color: hotpink;
-}
-
-#equal {
-  grid-column: span 3;
-  background-color: rgb(234, 215, 250);
-  color: blueviolet;
-}
-
-#delete,
-#clear {
-  background-color: deeppink;
-}
-
-@media screen and (max-width: 380px) {
-  
-  .calculator{
-    #display {
-        font-size: 1.5rem;
-      }
-  }  
-  .calculator-buttons{
-  button {
-    font-size: 1rem;
-  }
-}
-}
-
-@media screen and (min-width: 1200px) {
-  
-    .calculator{
-      #display {
-          font-size: 3rem;
-        }
-    }  
-    .calculator-buttons{
-    button {
-      font-size: 2.5rem;
-    }
-  }
-  }

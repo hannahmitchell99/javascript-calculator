@@ -12,24 +12,6 @@ body {
   align-items: center;
 }
 
-.calculator {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 80%;
-}
-.calculator #display {
-  width: 75%;
-  font-size: 2.5rem;
-  font-family: "Poppins", sans-serif;
-  color: rgb(185, 137, 229);
-  background-color: rgb(246, 233, 246);
-  border-radius: 1rem;
-  word-wrap: break-word;
-}
-
 .calculator-buttons {
   height: 70%;
   width: 75%;
@@ -48,19 +30,22 @@ body {
   border-radius: 1rem;
 }
 
-.operators {
-  background-color: hotpink;
+.calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 80%;
 }
-
-#equal {
-  grid-column: span 3;
-  background-color: rgb(234, 215, 250);
-  color: blueviolet;
-}
-
-#delete,
-#clear {
-  background-color: deeppink;
+.calculator #display {
+  width: 75%;
+  font-size: 2.5rem;
+  font-family: "Poppins", sans-serif;
+  color: rgb(185, 137, 229);
+  background-color: rgb(246, 233, 246);
+  border-radius: 1rem;
+  word-wrap: break-word;
 }
 
 @media screen and (max-width: 380px) {
@@ -78,4 +63,18 @@ body {
   .calculator-buttons button {
     font-size: 2.5rem;
   }
+}
+.operators {
+  background-color: hotpink;
+}
+
+#equal {
+  grid-column: span 3;
+  background-color: rgb(234, 215, 250);
+  color: blueviolet;
+}
+
+#delete,
+#clear {
+  background-color: deeppink;
 }/*# sourceMappingURL=styles.css.map */
