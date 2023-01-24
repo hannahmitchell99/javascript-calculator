@@ -32,20 +32,18 @@ const whenClicked = (event) => {
 
 const clearClicked = () => {
   displayValue = "0";
-  return display.innerText = clearedValue;
+  return (display.innerText = clearedValue);
 };
 
 // deleting last operator
 
 const deleteClicked = () => {
-  if (display.innerText.length > 1){
-    return display.innerText = display.innerText.slice(0, -1);
-  } else{
-    displayValue = "0"
-    return display.innerText = displayValue;
-
+  if (display.innerText.length > 1) {
+    return (display.innerText = display.innerText.slice(0, -1));
+  } else {
+    displayValue = "0";
+    return (display.innerText = displayValue);
   }
-  
 };
 
 // Functions that work with the clicked buttons to give an output
@@ -65,7 +63,6 @@ const ifEqualsClicked = () => {
   // divide first, then multiply, then add, then subtract.
   // each time we are moving through the array, we are alternating between the numbers and the operators array.
   // final element in the array will be the output.
-
 
   let divide = operators.indexOf("÷"); // finding where in the operators array divide is located
   while (divide != -1) {
@@ -99,16 +96,14 @@ const ifEqualsClicked = () => {
     operators.splice(add, 1);
     add = operators.indexOf("+");
   }
-  if (numbers.includes(NaN)){
-    display.innerText = "ERROR"
+  if (numbers.includes(NaN)) {
+    display.innerText = "ERROR";
     displayValue = "0";
   } else {
     displayValue = numbers;
-    return display.innerText = numbers; 
+    return (display.innerText = numbers);
   }
-  
 };
-
 
 // checking the arrays and displays are returning correctly
 
