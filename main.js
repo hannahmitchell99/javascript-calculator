@@ -51,7 +51,7 @@ const deleteClicked = () => {
 // function to create array of values and to determine operator chosen
 
 const ifEqualsClicked = () => {
-  // creating an array with just numbers (strings at this point)
+  // creating an array with just numbers and full stops (strings at this point)
   let numbers = displayValue.split(/\+|\-|\x|\÷/g);
 
   // creating an array of operators
@@ -121,6 +121,7 @@ numberButtons.forEach((numberButton) => {
 operatorButtons.forEach((operatorButton) => {
   operatorButton.addEventListener("click", whenClicked);
 });
+
 
 float.addEventListener("click", whenClicked);
 

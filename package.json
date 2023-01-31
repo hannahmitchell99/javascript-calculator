@@ -1,0 +1,23 @@
+{
+  "name": "javascript-calculator",
+  "version": "1.0.0",
+  "description": "The intention of this project was to create a functional calculator using Javascript, without the eval() function. The calculator had to be able to accept a minimum of two inputs.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hannahmitchell99/javascript-calculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hannahmitchell99/javascript-calculator/issues"
+  },
+  "homepage": "https://github.com/hannahmitchell99/javascript-calculator#readme",
+  "devDependencies": {
+    "cypress": "^12.4.1"
+  }
+}
